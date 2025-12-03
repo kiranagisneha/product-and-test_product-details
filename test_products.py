@@ -1,14 +1,11 @@
-def product_info(product_id, name, quantity, price):
-    return (
-        f"Product ID: {product_id}\n"
-        f"Name: {name}\n"
-        f"Quantity: {quantity}\n"
-        f"Price: {price}"
+from product import product_info
+
+def test_product_info():
+    expected_output = (
+        "Product ID: P102\n"
+        "Name: Keyboard\n"
+        "Quantity: 5\n"
+        "Price: 799.5"
     )
-if __name__ == "__main__":
-    product_id = "P102"
-    name = "Keyboard"
-    quantity = 5
-    price = 799.50
-    print("Product Details:\n")
-    print(product_info(product_id, name, quantity, price))
+    result = product_info("P102", "Keyboard", 5, 799.5)
+    assert result == expected_output
