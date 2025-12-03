@@ -1,10 +1,11 @@
-def product_info(product_id, name, quantity, price):
+def product_info(p_id, name, quantity, price):
     return (
-        f"Product ID: {product_id}\n"
+        f"Product ID: {p_id}\n"
         f"Name: {name}\n"
         f"Quantity: {quantity}\n"
         f"Price: {price}"
     )
+
 if __name__ == "__main__":
     product_id = "P102"
     name = "Keyboard"
